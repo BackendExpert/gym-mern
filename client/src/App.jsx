@@ -44,8 +44,8 @@ export default function App() {
             showNavBar ? "translate-y-0" : "-translate-y-full"
           } ${
             isTopOfPage
-              ? "bg-transparent transition-colors duration-500"
-              : "bg-white shadow-md transition-colors duration-500"
+              ? "bg-transparent transition-colors duration-500 "
+              : "bg-white/10 backdrop-blur-md shadow-md transition-colors duration-500"
           }`}
           >
             <Nav />
