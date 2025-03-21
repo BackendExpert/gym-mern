@@ -30,7 +30,7 @@ const HomePage = () => {
         <div className="">
             <Team />
         </div>
-        <div className="">
+        <div className="" id='contactUs'>
             <GetInTouch />
         </div>
     </div>

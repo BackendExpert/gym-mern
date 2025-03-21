@@ -43,7 +43,7 @@ const Footer = () => {
                             <h1 className="text-white uppercase text-2xl">Support</h1>
                             <div className="text-gray-500">
                                 <p className="p-4 duration-500 hover:text-white">
-                                    <a href="">Login</a>
+                                    <a href="/signin">Login</a>
                                 </p>
                                 <p className="p-4 duration-500 hover:text-white">
                                     <a href="">My account</a>

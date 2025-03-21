@@ -11,8 +11,8 @@ const Nav = () => {
         { id: 3, name: 'Services', link: '#' },
         { id: 4, name: 'Products', link: '#' },
         { id: 5, name: 'Trainers', link: '#' },
-        { id: 6, name: 'Contact Us', link: '#' },
-        { id: 7, name: 'Login', link: '#' },
+        { id: 6, name: 'Contact Us', link: '/#contactUs' },
+        { id: 7, name: 'Login', link: '/signin' },
     ];
 
     const toggleMobileMenu = () => {
