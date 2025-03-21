@@ -5,8 +5,8 @@ const WhyChooseUs = () => {
         <div className="bg-[#0a0a0a] text-white py-16">
             <div className='xl:px-28 md:px-10 px-4'>
                 <div className="grid md:grid-cols-3 gap-0">
-                    <div className="xl:min-h-[70vh] md:min-h-[50vh] min-h-96 w-full bg-[url(https://wallpapercave.com/wp/wp12101065.jpg)] bg-cover bg-center"></div>
-                    <div className="w-full bg-[#151515]">
+                    <div data-aos="zoom-in" className="xl:min-h-[70vh] md:min-h-[50vh] min-h-96 w-full bg-[url(https://wallpapercave.com/wp/wp12101065.jpg)] bg-cover bg-center"></div>
+                    <div data-aos="zoom-out" className="w-full bg-[#151515]">
                         <div className="py-8 text-center xl:px-8 md:px-4 px-8">
                             <h1 className="text-orange-500 font-semibold text-3xl uppercase">Why Choose <span className='text-white'>FitFlex</span> ?</h1>
 
@@ -48,7 +48,7 @@ const WhyChooseUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="xl:min-h-[70vh] md:min-h-[50vh] min-h-96 w-full bg-[url(https://wallpapercave.com/wp/wp5412909.jpg)] bg-cover bg-center"></div>
+                    <div data-aos="zoom-in" className="xl:min-h-[70vh] md:min-h-[50vh] min-h-96 w-full bg-[url(https://wallpapercave.com/wp/wp5412909.jpg)] bg-cover bg-center"></div>
                 </div>
             </div>
         </div>

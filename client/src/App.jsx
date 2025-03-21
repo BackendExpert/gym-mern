@@ -7,6 +7,7 @@ import PageNotFound from "./components/ErrorPages/PageNotFound.jsx";
 import SignUp from "./pages/AuthPages/SignUp.jsx";
 import Login from "./pages/AuthPages/Login.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
+import 'aos/dist/aos.css';
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);

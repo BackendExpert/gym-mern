@@ -13,7 +13,7 @@ const Team = () => {
                     {
                         teamdata.map((team, index) => {
                             return (
-                                <div key={index}>
+                                <div data-aos="zoom-out" key={index}>
                                     <center><img src={team.icon} alt="" className='rounded-full' /></center>
                                     <div className="text-center mt-4">
                                         <h1 className="text-3xl font-semibold text-orange-500">{team.name}</h1>

@@ -12,7 +12,7 @@ const PricingPlan = () => {
                     {
                         gymplan.map((data, index) => {
                             return (
-                                <div className="duration-500 hover:bg-[#151515] bg-transparent bg-[#0a0a0a] hover:border-white p-8 group" key={index}>
+                                <div data-aos="zoom-in" className="duration-500 hover:bg-[#151515] bg-transparent bg-[#0a0a0a] hover:border-white p-8 group" key={index}>
                                     <center>
                                         <div className="duration-500 h-auto rounded-full w-28 p-8 bg-[#151515] group-hover:bg-orange-500">
                                             <data.icon className='h-12 w-auto' />

@@ -13,7 +13,7 @@ const ClassGym = () => {
                 {gymdata.map((data) => {
                     if (data.id <= 4) {
                         return (
-                            <div key={data.id} className="">
+                            <div data-aos="zoom-in" key={data.id} className="">
                                 <div className="border-b-2 border-white">
                                     <img src={data.img} alt={`Gym Image`} className="w-full max-w-xs" />
                                 </div>
@@ -33,7 +33,7 @@ const ClassGym = () => {
                     gymdata.map((data, index) => {
                         if (data.id === 5) {
                             return (
-                                <div className="xl:w-1/2">
+                                <div data-aos="flip-right" className="xl:w-1/2">
                                     <div key={data.id} className="">
                                         <div className="border-b-2 border-white">
                                             <img src={data.img} alt={`Gym Image`} className="w-full " />
@@ -50,7 +50,7 @@ const ClassGym = () => {
                     })
                 }
 
-                <div className="pl-4 xl:w-1/2 xl:mt-0 mt-8 bg-[#0a0a0a] xl:ml-4 rounded p-8 ml-0">
+                <div data-aos="zoom-out" className="pl-4 xl:w-1/2 xl:mt-0 mt-8 bg-[#0a0a0a] xl:ml-4 rounded p-8 ml-0">
                     <div className="flex">
                         <div className="md:w-2/3 md:mt-24">
                             <h1 className="text-3xl md:text-left pl-8">TRANSFORM YOUR BODY & MIND WITH <span className='text-orange-500'>FITNESS WORKSOUTS !!</span></h1>
