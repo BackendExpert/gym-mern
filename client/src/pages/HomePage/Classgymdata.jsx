@@ -45,3 +45,5 @@ const gymdata = [
         img: class5img,
     },
 ]
+
+export {gymdata}
