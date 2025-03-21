@@ -39,7 +39,7 @@ const WhyPage = () => {
                 {
                     datawhypage.map((data, index) => {
                         return (
-                            <div data-aos="flip-left" className="" key={index}>
+                            <div className="" key={index}>
                                 <center>
                                     <div className="duration-500 hover:bg-orange-500 bg-[#151515] h-auto rounded-full w-28 p-8 ">
                                         <data.icon className='h-12 w-auto' />
