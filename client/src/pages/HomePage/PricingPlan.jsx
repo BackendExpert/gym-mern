@@ -1,6 +1,6 @@
 import React from 'react'
 import { gymplan } from './PlanData'
-
+import bodyb from '../../assets/bodybuilder.png'
 const PricingPlan = () => {
     return (
         <div className='text-white text-center bg-[#151515] py-24 xl:px-40 md:px-20 px-4'>
@@ -8,7 +8,7 @@ const PricingPlan = () => {
             <h1 className="text-3xl uppercase">Choose your pricing plan</h1>
 
             <div className="">
-                <div className="grid md:grid-cols-3 gap-6 mt-6">
+                <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-6 mt-6">
                     {
                         gymplan.map((data, index) => {
                             return (
@@ -49,9 +49,16 @@ const PricingPlan = () => {
                             )
                         })
                     }
+
+                    <div className="xl:hidden block">
+                        <div className="bg-[#0a0a0a] p-4 rounded h-full">
+                            <img src={bodyb} alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     )
 }
 
