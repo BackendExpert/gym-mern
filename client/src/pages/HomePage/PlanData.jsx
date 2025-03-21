@@ -1,6 +1,11 @@
+import { MdOutlineFamilyRestroom, MdWorkspacePremium } from "react-icons/md";
+import { FaUserAlt } from "react-icons/fa";
+
+
 const gymplan = [
     {
         id: 1,
+        icon: FaUserAlt,
         name: 'Basic',
         price: '$ 12.00/month',
         subtitle: 'single class',
@@ -20,6 +25,7 @@ const gymplan = [
     {
         id: 2,
         name: 'Pro',
+        icon: MdOutlineFamilyRestroom,
         price: '$ 38.00/month',
         subtitle: 'family class',
         listitems: [
@@ -37,6 +43,7 @@ const gymplan = [
     {
         id: 3,
         name: 'Premium',
+        icon: MdWorkspacePremium,
         price: '$ 66.00/month',
         subtitle: 'all-in-on class',
         listitems: [
@@ -52,3 +59,6 @@ const gymplan = [
         ]
     },
 ]
+
+
+export {gymplan}
