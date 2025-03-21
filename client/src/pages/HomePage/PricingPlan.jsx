@@ -12,12 +12,38 @@ const PricingPlan = () => {
                     {
                         gymplan.map((data, index) => {
                             return (
-                                <div className="duration-500 hover:bg-white bg-transparent border border-orange-500 hover:border-white p-8 group" key={index}>
+                                <div className="duration-500 hover:bg-[#151515] bg-transparent bg-[#0a0a0a] hover:border-white p-8 group" key={index}>
                                     <center>
-                                        <div className="duration-500 h-auto rounded-full w-28 p-8 group-hover:bg-orange-500">
+                                        <div className="duration-500 h-auto rounded-full w-28 p-8 bg-[#151515] group-hover:bg-orange-500">
                                             <data.icon className='h-12 w-auto' />
                                         </div>
                                     </center>
+                                    <div className="text-center">
+                                        <h1 className="mt-4 text-2xl uppercase group-hover:text-orange-500 font-semibold">{data.name}</h1>
+                                        <p className="mt-1 uppercase group-hover:text-gray-500 font-semibold">{data.subtitle}</p>
+
+                                        <h1 className="mt-8 text-orange-500 text-3xl font-semibold">{data.price}</h1>
+
+                                        <div className="">
+                                            {
+                                                data.listitems.map((subdata, subindex) => {
+                                                    return (
+                                                        <div className="" key={subindex}>
+                                                            <h1 className="group-hover:text-gray-500 font-semibold p-2">{subdata.name}</h1>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+
+                                        <div className="mt-8">
+                                            <a href="#">
+                                                <button className='duration-500 bg-transparent border border-orange-500 py-2 px-8 group-hover:bg-orange-500'>
+                                                    Explore More
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
 
                             )
