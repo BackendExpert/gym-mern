@@ -1,9 +1,15 @@
+import { FaDumbbell, FaUsers, FaBoxesStacked   } from "react-icons/fa6";
+import { MdSpatialTracking } from "react-icons/md";
+import { FaHeartbeat } from "react-icons/fa";
+import { TfiHeadphoneAlt } from "react-icons/tfi";
+
+
 const servicedata = [
     {
         id: 1,
         name: 'Workout & Training Management',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/wp/wp4838603.jpg',
+        icon: FaDumbbell,
         desc: 'Optimize your fitness training sessions with our advanced workout tracking system.',
         services: [
             {id: 1, name: 'Create and customize workout plans for members.'},
@@ -15,8 +21,8 @@ const servicedata = [
     {
         id: 2,
         name: 'Membership & Subscription Management',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/wp/wp2482799.jpg',
+        icon: FaUsers,
         desc: 'Easily manage members with an automated and secure system.',
         services: [
             {id: 1, name: 'Simple online registration and profile creation.'},
@@ -29,8 +35,8 @@ const servicedata = [
     {
         id: 3,
         name: 'Class & Session Scheduling',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/wp/wp2482798.jpg',
+        icon: FaDumbbell,
         desc: 'Provide members with an interactive scheduling system for classes and training sessions',
         services: [
             {id: 1, name: 'Manage group fitness classes, personal training, and special events.'},
@@ -42,8 +48,8 @@ const servicedata = [
     {
         id: 4,
         name: 'Performance & Progress Tracking',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/w200/wCNanCt.jpg',
+        icon: MdSpatialTracking,
         desc: 'Help members stay motivated with detailed fitness tracking tools.',
         services: [
             {id: 1, name: 'Monitor progress on strength, endurance, and body transformation.'},
@@ -56,8 +62,8 @@ const servicedata = [
     {
         id: 5,
         name: 'Health & Nutrition Guidance',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/wp/wp8834029.jpg',
+        icon: FaHeartbeat,
         desc: 'Offer personalized health and wellness support to your members.',
         services: [
             {id: 1, name: 'Provide diet plans and nutrition tracking tools.'},
@@ -69,8 +75,8 @@ const servicedata = [
     {
         id: 6,
         name: 'Product Sales & Inventory Management',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/w200/wp3699399.jpg',
+        icon: FaBoxesStacked,
         desc: 'Sell fitness-related products and manage stock efficiently.',
         services: [
             {id: 1, name: 'Online store for gym gear, supplements, and apparel.'},
@@ -82,8 +88,8 @@ const servicedata = [
     {
         id: 7,
         name: 'Gym Analytics & Business Insights',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/w200/wp8834037.jpg',
+        icon: FaDumbbell,
         desc: 'Access valuable insights to enhance gym operations.',
         services: [
             {id: 1, name: 'Real-time dashboards with key performance indicators.'},
@@ -95,8 +101,8 @@ const servicedata = [
     {
         id: 8,
         name: 'Customer Support & Service Updates',
-        img: '',
-        icon: '',
+        img: 'https://wallpapercave.com/w200/wp2639542.jpg',
+        icon: TfiHeadphoneAlt,
         desc: 'We ensure continuous improvements and provide top-notch support.',
         services: [
             {id: 1, name: 'Regular software updates with new features and security enhancements.'},
