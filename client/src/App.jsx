@@ -9,6 +9,7 @@ import Login from "./pages/AuthPages/Login.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 import 'aos/dist/aos.css';
 import Services from "./pages/Services/Services.jsx";
+import Products from "./pages/Products/Products.jsx";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/signin" element={<Login /> } />
         <Route path="/AboutUs" element={<AboutUs /> } />
         <Route path="/Services" element={<Services /> } />
+        <Route path="/Products" element={<Products /> } />
        
       </Routes>
       {shouldShowFooter && <Footer />}
