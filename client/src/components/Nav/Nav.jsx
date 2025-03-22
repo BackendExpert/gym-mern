@@ -10,7 +10,7 @@ const Nav = () => {
         { id: 2, name: 'About Us', link: '/AboutUs' },
         { id: 3, name: 'Services', link: '/Services' },
         { id: 4, name: 'Products', link: '/Products' },
-        { id: 5, name: 'Trainers', link: '#' },
+        { id: 5, name: 'Trainers', link: '/Trainers' },
         { id: 6, name: 'Contact Us', link: '/#contactUs' },
         { id: 7, name: 'Login', link: '/signin' },
     ];
