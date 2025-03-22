@@ -4,7 +4,6 @@ import Nav from "./components/Nav/Nav";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import PageNotFound from "./components/ErrorPages/PageNotFound.jsx";
-import SignUp from "./pages/AuthPages/SignUp.jsx";
 import Login from "./pages/AuthPages/Login.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 import 'aos/dist/aos.css';
@@ -61,7 +60,6 @@ export default function App() {
       <Routes>
         <Route path="*" element={<PageNotFound /> } />
         <Route path="/" element={<HomePage /> } />
-        <Route path="/signup" element={<SignUp /> } />
         <Route path="/signin" element={<Login /> } />
         <Route path="/AboutUs" element={<AboutUs /> } />
         <Route path="/Services" element={<Services /> } />
