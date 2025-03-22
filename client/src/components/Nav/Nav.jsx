@@ -8,7 +8,7 @@ const Nav = () => {
     const navData = [
         { id: 1, name: 'Home', link: '/' },
         { id: 2, name: 'About Us', link: '/AboutUs' },
-        { id: 3, name: 'Services', link: '#' },
+        { id: 3, name: 'Services', link: '/Services' },
         { id: 4, name: 'Products', link: '#' },
         { id: 5, name: 'Trainers', link: '#' },
         { id: 6, name: 'Contact Us', link: '/#contactUs' },
