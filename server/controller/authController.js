@@ -52,6 +52,12 @@ const authController = {
             const resultnewuser = await newuser.save()
 
             if(resultnewuser){
+                const newAct = new UserActivity({
+                    email: email,
+                    activity: "User Registation"
+                })
+                const newActResult = await newAct.save()
+
                 return res.json({ Status: "Success"})
             }
             else{
@@ -87,7 +93,21 @@ const authController = {
                 return res.json({ Error: "Your Account is Deactive..."})
             }
 
-            
+            const newAct = new UserActivity({
+                email: email,
+                activity: "User Login"
+            })
+
+            const reusltnewAct = await newAct.save()
+
+            if(reusltnewAct){
+                const token = jwt.sign({ id: checkuser._id, role:checkuser.role }, process.env.JWT_SECRET);
+                return res.json({ Status: "Success", Result: checkuser, Token: token })
+            }
+            else{
+                return res.json({ Error: "Internal Server Error"})
+            }
+
         }
         catch(err){
             console.log(err)
