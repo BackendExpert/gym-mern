@@ -67,14 +67,72 @@ const DashSide = () => {
                 {sidemenu.map((menu, index) => {
                     const isActive = currentID === String(menu.id); // Ensure comparison works
                     if (RoleUser === "admin") {
-                        if (menu.id !== 4) {
+                        if (
+                            menu.id === 1 ||
+                            menu.id === 2 ||
+                            menu.id === 3 ||
+                            menu.id === 4 ||
+                            menu.id === 5 ||
+                            menu.id === 6 ||  
+                            menu.id === 7                       
+                        ) {
                             return (
                                 <Link to={menu.link} key={menu.id}>
                                     <div
                                         onClick={() => currentMenu(menu.id)}
                                         className={`py-4 pl-4 cursor-pointer duration-500 flex items-center ${isActive
-                                                ? "text-[#0f5a97] font-semibold"
-                                                : "text-gray-400 hover:pl-6 hover:text-[#0f5a97]"
+                                                ? "text-orange-500 font-semibold"
+                                                : "text-white hover:pl-6 hover:text-orange-500"
+                                            }`}
+                                    >
+                                        <menu.icon className="h-8 w-auto" />
+                                        <h1 className="pt-1 pl-4">{menu.name}</h1>
+                                    </div>
+                                </Link>
+                            );
+                        }
+                    }
+
+                    if (RoleUser === "trainer") {
+                        if (
+                            menu.id === 1 ||
+                            menu.id === 8 ||
+                            menu.id === 9 ||
+                            menu.id === 10 ||
+                            menu.id === 11                        
+                        ) {
+                            return (
+                                <Link to={menu.link} key={menu.id}>
+                                    <div
+                                        onClick={() => currentMenu(menu.id)}
+                                        className={`py-4 pl-4 cursor-pointer duration-500 flex items-center ${isActive
+                                                ? "text-orange-500 font-semibold"
+                                                : "text-white hover:pl-6 hover:text-orange-500"
+                                            }`}
+                                    >
+                                        <menu.icon className="h-8 w-auto" />
+                                        <h1 className="pt-1 pl-4">{menu.name}</h1>
+                                    </div>
+                                </Link>
+                            );
+                        }
+                    }
+
+                    if (RoleUser === "member") {
+                        if (
+                            menu.id === 1 ||
+                            menu.id === 12 ||
+                            menu.id === 13 ||
+                            menu.id === 14 ||
+                            menu.id === 15                        
+                        ) {
+                            return (
+                                <Link to={menu.link} key={menu.id}>
+                                    <div
+                                        onClick={() => currentMenu(menu.id)}
+                                        className={`py-4 pl-4 cursor-pointer duration-500 flex items-center ${isActive
+                                                ? "text-orange-500 font-semibold"
+                                                : "text-white hover:pl-6 hover:text-orange-500"
                                             }`}
                                     >
                                         <menu.icon className="h-8 w-auto" />

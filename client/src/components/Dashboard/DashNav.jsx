@@ -8,8 +8,9 @@ import { FaUserCircle, FaUserCog } from "react-icons/fa";
 import { MdOutlineHelp, MdLogout } from "react-icons/md";
 
 const DashNav = () => {
-    const Username = secureLocalStorage.getItem('loginU')
-    const EmailUser = secureLocalStorage.getItem('loginE')
+    const RoleUser = secureLocalStorage.getItem("loginR");
+    const EmailUser = secureLocalStorage.getItem("loginE");
+    const Username = secureLocalStorage.getItem("loginU");
 
     const [menu, setmenu] = useState(false)
 
@@ -72,8 +73,8 @@ const DashNav = () => {
                     <div className="flex border-b border-orange-500 px-8 pb-4">
                         <img src={userImg} alt="" className='h-10 w-auto rounded-full' />
                         <div className="pl-4 pt-1">
-                            <h1 className="text-xs font-semibold text-orange-500">Jehan Weerasuriya</h1>
-                            <p className="text-xs text-gray-500">jehanweerasuriya@example.com</p>
+                            <h1 className="text-xs font-semibold text-orange-500">{Username}</h1>
+                            <p className="text-xs text-gray-500">{EmailUser}</p>
                         </div>
                     </div>
 
@@ -112,13 +113,13 @@ const DashNav = () => {
                             </a>
 
 
-                            <a href="#" className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
+                            <div onClick={healdeLogout} className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
                                 <center>
                                     <div className="text-white py-2">
                                         <MdLogout className='h-6 w-auto' />
                                     </div>
                                 </center>
-                            </a>
+                            </div>
                         </div>
 
                     </div>
