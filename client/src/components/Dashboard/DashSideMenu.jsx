@@ -15,31 +15,89 @@ const sidemenu = [
     },
     {
         id: 2,
-        name: "Jobs",
+        name: "Members",
         icon: MdWork,
         link: '#'
     },
     {
         id: 3,
-        name: "Companies",
+        name: "Trainers",
         icon: BiBuildings,
         link: '#'
     },
     {
         id: 4,
-        name: "My Company",
+        name: "Membership & Add-ons",
         icon: FaBuildingShield,
         link: '#'
     },
     {
         id: 5,
-        name: "Applicants",
+        name: "Check-ins & Attendance",
         icon: FaUsers,
         link: '#'
     },
     {
         id: 6,
-        name: "Settings",
+        name: "Workouts & Classes",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 7,
+        name: "Reports & Analytics",
+        icon: BsGearFill,
+        link: '#'
+    },
+
+    // for trainer
+    {
+        id: 8,
+        name: "My Schedule",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 9,
+        name: "Members Assigned",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 10,
+        name: "Workout Plans",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 11,
+        name: "Attendance",
+        icon: BsGearFill,
+        link: '#'
+    },
+
+    // for Member
+    {
+        id: 12,
+        name: "My Membership",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 13,
+        name: "Class Schedule",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 14,
+        name: "Trainer Sessions",
+        icon: BsGearFill,
+        link: '#'
+    },
+    {
+        id: 15,
+        name: "Attendance History",
         icon: BsGearFill,
         link: '#'
     },
