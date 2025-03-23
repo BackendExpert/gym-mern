@@ -1,9 +1,10 @@
 import { BiSolidDashboard } from "react-icons/bi";
-import { BsGearFill } from "react-icons/bs";
-import { MdWork } from "react-icons/md";
-import { BiBuildings } from "react-icons/bi";
-import { FaBuildingShield } from "react-icons/fa6";
-import { FaUsers } from "react-icons/fa";
+import { BsCalendar2DateFill } from "react-icons/bs";
+import { MdWorkHistory } from "react-icons/md";
+import { FaChartSimple, FaClipboardUser, FaUsersViewfinder, FaChalkboardUser, FaUsers, FaCreditCard, FaDumbbell  } from "react-icons/fa6";
+import { FaFileSignature } from "react-icons/fa";
+import { GrSchedules } from "react-icons/gr";
+
 
 
 const sidemenu = [
@@ -16,37 +17,37 @@ const sidemenu = [
     {
         id: 2,
         name: "Members",
-        icon: MdWork,
+        icon: FaUsers,
         link: '#'
     },
     {
         id: 3,
         name: "Trainers",
-        icon: BiBuildings,
+        icon: FaChalkboardUser,
         link: '#'
     },
     {
         id: 4,
         name: "Membership & Add-ons",
-        icon: FaBuildingShield,
+        icon: FaCreditCard,
         link: '#'
     },
     {
         id: 5,
         name: "Check-ins & Attendance",
-        icon: FaUsers,
+        icon: FaFileSignature,
         link: '#'
     },
     {
         id: 6,
         name: "Workouts & Classes",
-        icon: BsGearFill,
+        icon: FaDumbbell,
         link: '#'
     },
     {
         id: 7,
         name: "Reports & Analytics",
-        icon: BsGearFill,
+        icon: FaChartSimple,
         link: '#'
     },
 
@@ -54,25 +55,25 @@ const sidemenu = [
     {
         id: 8,
         name: "My Schedule",
-        icon: BsGearFill,
+        icon: GrSchedules,
         link: '#'
     },
     {
         id: 9,
         name: "Members Assigned",
-        icon: BsGearFill,
+        icon: FaUsersViewfinder,
         link: '#'
     },
     {
         id: 10,
         name: "Workout Plans",
-        icon: BsGearFill,
+        icon: FaDumbbell,
         link: '#'
     },
     {
         id: 11,
         name: "Attendance",
-        icon: BsGearFill,
+        icon: FaFileSignature,
         link: '#'
     },
 
@@ -80,25 +81,25 @@ const sidemenu = [
     {
         id: 12,
         name: "My Membership",
-        icon: BsGearFill,
+        icon: FaClipboardUser,
         link: '#'
     },
     {
         id: 13,
         name: "Class Schedule",
-        icon: BsGearFill,
+        icon: BsCalendar2DateFill,
         link: '#'
     },
     {
         id: 14,
         name: "Trainer Sessions",
-        icon: BsGearFill,
+        icon: FaDumbbell,
         link: '#'
     },
     {
         id: 15,
         name: "Attendance History",
-        icon: BsGearFill,
+        icon: MdWorkHistory ,
         link: '#'
     },
 ]

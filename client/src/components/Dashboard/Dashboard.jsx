@@ -7,7 +7,7 @@ import DashFooter from './DashFooter'
 import { FaArrowCircleRight, FaChevronCircleLeft } from "react-icons/fa";
 import { TiThMenu } from "react-icons/ti";
 import { MdOutlineClose } from "react-icons/md";
-
+import '../../App.css'
 
 
 const Dashbaord = () => {
@@ -28,11 +28,12 @@ const Dashbaord = () => {
             <div className='w-full bg-[#0a0a0a] min-h-screen'>
                 <div className="xl:flex">
                     <div
-                        className={`shadow-[5px_0_15px_-5px_rgba(0,0,0,0.1)] p-4 xl:block fixed top-0 left-0 h-full bg-[#151515] shadow-custom z-50 xl:w-[19%] w-[75%] overflow-y-auto transform duration-500 ${openside ? " translate-x-0" : "-translate-x-full xl:translate-x-0"
+                        className={`shadow-[5px_0_15px_-5px_rgba(0,0,0,0.1)] p-4 xl:block fixed top-0 left-0 h-full bg-[#151515] shadow-custom z-50 xl:w-[19%] w-[75%] overflow-y-auto transform duration-500 scrollbar-thin ${openside ? "translate-x-0" : "-translate-x-full xl:translate-x-0"
                             }`}
                     >
                         <DashSide />
                     </div>
+
                     <button
                         className="xl:hidden fixed top-6 right-2 z-50 bg-orange-500 p-3 rounded font-semibold"
                         onClick={headlemenuopen}

@@ -1,0 +1,17 @@
+/* Custom scrollbar for Tailwind */
+.scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
