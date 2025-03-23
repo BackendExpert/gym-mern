@@ -3,6 +3,9 @@ import { BiSolidDashboard } from "react-icons/bi";
 import { FaUser } from 'react-icons/fa';
 import { FaBuildingUser, FaChalkboardUser, FaUserPlus } from 'react-icons/fa6'
 import CountUp from 'react-countup'
+import OneLineChart from '../../components/Charts/OneLineChart';
+import DoughnutChart from '../../components/Charts/DoughnutChart';
+import gymuser from '../../assets/GymUser.png'
 
 const AdminDash = () => {
     const admincard = [
@@ -17,7 +20,7 @@ const AdminDash = () => {
             id: 2,
             name: 'Total Trainers',
             value: 500,
-            icon: FaBuildingUser ,
+            icon: FaBuildingUser,
             title: 'in FitFlex',
         },
         {
@@ -57,13 +60,13 @@ const AdminDash = () => {
                                     <div className="flex">
                                         <div className="w-28 py-10 px-2 rounded-l-lg bg-orange-500">
                                             <center >
-                                                <data.icon className="h-8 w-auto" />                                                
+                                                <data.icon className="h-8 w-auto" />
                                             </center>
                                         </div>
                                         <div className="border-b-2 border-orange-500 w-full py-6 px-4 rounded-r-lg bg-[#151515] text-white">
                                             <h3 className="text-lg font-semibold">{data.name}</h3>
                                             <p className="text-sm">{data.title}</p>
-                                            <div className="text-right pt-2 text-xl font-semibold"><CountUp end={data.value} duration={3}/> + </div>
+                                            <div className="text-right pt-2 text-xl font-semibold"><CountUp end={data.value} duration={3} /> + </div>
                                         </div>
                                     </div>
                                 </div>
@@ -72,6 +75,21 @@ const AdminDash = () => {
                         })
                     }
                 </div>
+            </div>
+
+            <div className="grid xl:grid-cols-2 gap-4 my-8 mr-4">
+                <div className="bg-[#151515] p-4 rounded-lg border-l border-orange-500 md:block hidden">
+                    <OneLineChart />
+                </div>
+                <div className="flex ">
+                    <div className="md:mr-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
+                        <DoughnutChart />
+                    </div>
+                    <div className="pt-12 md:ml-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
+                        <img src={gymuser} alt="" />
+                    </div>
+                </div>
+
             </div>
         </div>
     )
