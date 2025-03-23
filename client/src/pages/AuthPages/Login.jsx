@@ -31,7 +31,7 @@ const Login = () => {
                 localStorage.setItem("login", res.data.Token)
                 secureLocalStorage.setItem("loginE", res.data.Result.email)
                 secureLocalStorage.setItem("loginU", res.data.Result.username)
-                secureLocalStorage.setItem("loginR", res.data.Result.isAdmin)
+                secureLocalStorage.setItem("loginR", res.data.Result.role)
                 localStorage.setItem("dashmenuID", 1)
                 window.location.reload()
             }
