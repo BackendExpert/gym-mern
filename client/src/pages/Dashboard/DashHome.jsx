@@ -1,8 +1,11 @@
 import React from 'react'
+import AdminDash from './AdminDash'
 
 const DashHome = () => {
   return (
-    <div>DashHome</div>
+    <div>
+        <AdminDash />
+    </div>
   )
 }
 
