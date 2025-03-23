@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import DefultInput from '../../components/Forms/DefultInput';
+import axios from 'axios';
 
 
 const SignUp = () => {
@@ -17,11 +18,18 @@ const SignUp = () => {
         }));
     };
 
-    const headleSubmit = (e) => {
+    const headleSubmit = async (e) => {
         e.preventDefault()
 
         try {
-
+            const res  = await axios.post(import.meta.env.VITE_APP_API + '/auth/signup', signupdata)
+            if(res.data.Status === "Success"){
+                alert("Registation Sucess")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
         }
         catch (err) {
             console.log(err)
