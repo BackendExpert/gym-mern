@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import secureLocalStorage from 'react-secure-storage'
-import { FaChevronDown, FaChevronUp, FaPowerOff } from "react-icons/fa";
+import { FaBell, FaChevronDown, FaChevronUp, FaPowerOff } from "react-icons/fa";
 import axios from 'axios';
 import userImg from '../../assets/user.png'
+import { FaUserCircle, FaUserCog } from "react-icons/fa";
+import { MdOutlineHelp, MdLogout } from "react-icons/md";
 
 const DashNav = () => {
     const Username = secureLocalStorage.getItem('loginU')
@@ -35,10 +37,10 @@ const DashNav = () => {
     // }, [])
 
     return (
-        <div className='bg-white py-8 shadow-md'>
+        <div className='bg-[#151515] py-8 shadow-md'>
             <div className="flex justify-between mr-4 pl-8">
                 <div className="w-full">
-                    <h1 className="uppercase font-semibold text-sky-500 mt-1">Dashboard</h1>
+                    <h1 className="uppercase font-semibold text-orange-500 mt-1">Dashboard</h1>
                 </div>
                 <div className="">
                     <div className="flex xl:mr-4 md:mr-20 mr-20 cursor-pointer" onClick={toggleMenu}>
@@ -47,7 +49,7 @@ const DashNav = () => {
                         alt="User Image" 
                         className="h-8 w-auto rounded-full" 
                     /> */}
-                        <div className="flex pl-4 pt-1 uppercase text-sky-500">
+                        <div className="flex pl-4 pt-1 uppercase text-orange-500">
                             {Username}
 
                             <div className="pl-1 pt-1">
@@ -63,10 +65,64 @@ const DashNav = () => {
                 </div>
             </div>
 
-            <div className={`absolute bg-white right-4 top-24 py-4 px-8 mt-1 rounded shadow-xl 
+            <div className={`absolute bg-[#151515] right-4 w-auto top-24 py-4 mt-1 rounded shadow-xl 
                         transition-all duration-300 transform 
                         ${menu ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-95 pointer-events-none'}`}>
-                <div onClick={healdeLogout} className="cursor-pointer flex"><FaPowerOff className='h-6 w-auto fill-sky-500' /> <p className='pl-2 uppercase text-sky-500'>Logout</p></div>
+                <div className="">
+                    <div className="flex border-b border-orange-500 px-8 pb-4">
+                        <img src={userImg} alt="" className='h-10 w-auto rounded-full' />
+                        <div className="pl-4 pt-1">
+                            <h1 className="text-xs font-semibold text-orange-500">Jehan Weerasuriya</h1>
+                            <p className="text-xs text-gray-500">jehanweerasuriya@example.com</p>
+                        </div>
+                    </div>
+
+                    <div className="px-8 pt-4">
+                        <div className="grid grid-cols-3 gap-6">
+                            <a href="#" className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
+                                <center>
+                                    <div className="text-white py-2 group-hover:text-orange-500">
+                                        <FaUserCircle className='h-6 w-auto' />
+                                    </div>
+                                </center>
+                            </a>
+
+                            <a href="#" className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
+                                <center>
+                                    <div className="text-white py-2">
+                                        <FaUserCog className='h-6 w-auto' />
+                                    </div>
+                                </center>
+                            </a>
+
+                            <a href="#" className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
+                                <center>
+                                    <div className="text-white py-2">
+                                        <FaBell className='h-6 w-auto' />
+                                    </div>
+                                </center>
+                            </a>
+
+                            <a href="#" className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
+                                <center>
+                                    <div className="text-white py-2">
+                                        <MdOutlineHelp className='h-6 w-auto' />
+                                    </div>
+                                </center>
+                            </a>
+
+
+                            <a href="#" className='bg-orange-500 py-2 rounded-xl duration-500 hover:bg-orange-800'>
+                                <center>
+                                    <div className="text-white py-2">
+                                        <MdLogout className='h-6 w-auto' />
+                                    </div>
+                                </center>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
         </div>

@@ -25,27 +25,27 @@ const Dashbaord = () => {
 
     if (RoleUser !== "" || EmailUser !== "" || Username !== "") {
         return (
-            <div className='w-full bg-sky-600/10 min-h-screen'>
+            <div className='w-full bg-[#0a0a0a] min-h-screen'>
                 <div className="xl:flex">
                     <div
-                        className={`shadow-[5px_0_15px_-5px_rgba(0,0,0,0.1)] p-4 xl:block fixed top-0 left-0 h-full bg-white shadow-custom z-50 xl:w-[19%] w-[75%] overflow-y-auto transform duration-500 ${openside ? " translate-x-0" : "-translate-x-full xl:translate-x-0"
+                        className={`shadow-[5px_0_15px_-5px_rgba(0,0,0,0.1)] p-4 xl:block fixed top-0 left-0 h-full bg-[#151515] shadow-custom z-50 xl:w-[19%] w-[75%] overflow-y-auto transform duration-500 ${openside ? " translate-x-0" : "-translate-x-full xl:translate-x-0"
                             }`}
                     >
                         <DashSide />
                     </div>
                     <button
-                        className="xl:hidden fixed top-6 right-2 z-50 bg-white p-3 rounded font-semibold"
+                        className="xl:hidden fixed top-6 right-2 z-50 bg-orange-500 p-3 rounded font-semibold"
                         onClick={headlemenuopen}
                     >
                         {openside ? (
-                            <MdOutlineClose className="fill-[#0f5a97] h-8 w-auto" />
+                            <MdOutlineClose className="fill-white h-8 w-auto" />
                         ) : (
-                            <TiThMenu className="fill-[#0f5a97] h-8 w-auto" />
+                            <TiThMenu className="fill-white h-8 w-auto" />
                         )}
                     </button>
 
                     <div className="xl:ml-[20%] w-full">
-                        <div className="xl:-ml-6">
+                        <div className="xl:-ml-6 ">
                             <DashNav />
                         </div>
                         <div className="xl:ml-0 ml-4">
