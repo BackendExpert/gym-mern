@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import DefultInput from '../../components/Forms/DefultInput';
+import axios from 'axios';
 
 
 const SignUp = () => {
@@ -17,19 +18,29 @@ const SignUp = () => {
         }));
     };
 
-    const headleSubmit = (e) => {
+    const headleSubmit = async (e) => {
         e.preventDefault()
-
         try {
+            // console.log(signupdata)
 
+            const res = await axios.post(import.meta.env.VITE_APP_API + '/auth/signup', signupdata)
+            if(res.data.Status === "Success"){
+                alert("Registaion Success")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
         }
         catch (err) {
             console.log(err)
         }
     }
+
+
     return (
         <div className="rounded-md md:mr-2 bg-[#151515] py-16 ">
-            <form onChange={headleSubmit} method="post">
+            <form onSubmit={headleSubmit} method="post">
                 <h1 className="uppercase text-xl font-semibold text-center">Welcome to <span className='text-orange-500 fon-semibold'>FitFlex</span></h1>
             
                 <div className="px-10 py-4">

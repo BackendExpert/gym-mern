@@ -12,6 +12,7 @@ import Products from "./pages/Products/Products.jsx";
 import Trainers from "./pages/Trainers/Trainers.jsx";
 import Dashbaord from "./components/Dashboard/Dashboard.jsx";
 import DashHome from "./pages/Dashboard/DashHome.jsx";
+import PrivateRoute from "./components/Auth/PrivateRoute.jsx";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -68,8 +69,8 @@ export default function App() {
         <Route path="/Products" element={<Products /> } />
         <Route path="/Trainers" element={<Trainers /> } />
 
-        <Route path="/Dashboard/" element={<Dashbaord /> } >
-          <Route path="Home" element={<DashHome />} />
+        <Route path="/Dashboard/" element={<PrivateRoute element={<Dashbaord /> } /> } >
+          <Route path="Home" element={<PrivateRoute element={<DashHome />} /> } />
         </Route>
        
       </Routes>
