@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import SignUp from './SignUp';
 import DefultInput from '../../components/Forms/DefultInput';
-
+import axios from 'axios';
+import secureLocalStorage from 'react-secure-storage'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+    const navigate = useNavigate()
     const [logindata, setlogindata] = useState({
         email: '',
         password: '',
@@ -17,11 +20,24 @@ const Login = () => {
         }));
     };
 
-    const headleSubmit = (e) => {
+    const headleSubmit = async(e) => {
         e.preventDefault()
 
         try {
-
+            const res = await axios.post(import.meta.env.VITE_APP_API + '/auth/signin', logindata)
+            if(res.data.Status === "Success"){
+                navigate('/Dashboard/Home')    
+                alert("Login Success")                
+                localStorage.setItem("login", res.data.Token)
+                secureLocalStorage.setItem("loginE", res.data.Result.email)
+                secureLocalStorage.setItem("loginU", res.data.Result.username)
+                secureLocalStorage.setItem("loginR", res.data.Result.isAdmin)
+                localStorage.setItem("dashmenuID", 1)
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
         }
         catch (err) {
             console.log(err)
@@ -35,7 +51,7 @@ const Login = () => {
             <div className="relative text-white md:pt-64 pt-40 xl:px-28 md:px-10 px-4">
                 <div className="md:flex justify-between">
                     <div className="md:my-0 my-4 rounded-md md:mr-2 bg-[#151515] py-16 md:w-1/2">
-                        <form onChange={headleSubmit} method="post">
+                        <form onSubmit={headleSubmit} method="post">
                             <h1 className="uppercase text-xl font-semibold text-center">Welcome Back to <span className='text-orange-500 fon-semibold'>FitFlex</span></h1>
 
                             <div className="px-10 py-4">

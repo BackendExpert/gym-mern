@@ -20,11 +20,12 @@ const SignUp = () => {
 
     const headleSubmit = async (e) => {
         e.preventDefault()
-
         try {
-            const res  = await axios.post(import.meta.env.VITE_APP_API + '/auth/signup', signupdata)
+            // console.log(signupdata)
+
+            const res = await axios.post(import.meta.env.VITE_APP_API + '/auth/signup', signupdata)
             if(res.data.Status === "Success"){
-                alert("Registation Sucess")
+                alert("Registaion Success")
                 window.location.reload()
             }
             else{
@@ -35,9 +36,11 @@ const SignUp = () => {
             console.log(err)
         }
     }
+
+
     return (
         <div className="rounded-md md:mr-2 bg-[#151515] py-16 ">
-            <form onChange={headleSubmit} method="post">
+            <form onSubmit={headleSubmit} method="post">
                 <h1 className="uppercase text-xl font-semibold text-center">Welcome to <span className='text-orange-500 fon-semibold'>FitFlex</span></h1>
             
                 <div className="px-10 py-4">
