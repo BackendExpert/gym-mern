@@ -8,7 +8,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const DoughnutChart = () => {
   // Dummy data
   const data = {
-    labels: ['Red', 'Blue', 'Yellow'], // Labels for each section of the doughnut
+    labels: ['Admin', 'Trainers', 'Users'], // Labels for each section of the doughnut
     datasets: [
       {
         label: 'My First Dataset',

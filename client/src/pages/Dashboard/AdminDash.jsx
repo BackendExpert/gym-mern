@@ -77,7 +77,7 @@ const AdminDash = () => {
                 </div>
             </div>
 
-            <div className="grid xl:grid-cols-2 gap-4 my-8 mr-4">
+            <div className="grid xl:grid-cols-2 gap-4 my-8 mr-0">
                 <div className="bg-[#151515] p-4 rounded-lg border-l border-orange-500 md:block hidden">
                     <OneLineChart />
                 </div>
