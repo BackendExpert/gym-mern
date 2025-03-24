@@ -6,6 +6,13 @@ import CountUp from 'react-countup'
 import OneLineChart from '../../components/Charts/OneLineChart';
 import DoughnutChart from '../../components/Charts/DoughnutChart';
 import gymuser from '../../assets/GymUser.png'
+import LatestSignUps from '../../components/AdminDash/Tables/LatestSignUps';
+import TrainerActLog from '../../components/AdminDash/Tables/TrainerActLog';
+import RecentCheckins from '../../components/AdminDash/Tables/RecentCheckins';
+import TimeCom from '../../components/OtherCom/TimeCom';
+import BestTrainer from '../../components/AdminDash/Tables/BestTrainer';
+import TopWorkoutPrograms from '../../components/AdminDash/Tables/TopWorkoutPrograms';
+import GymStats from '../../components/OtherCom/GymStats';
 
 const AdminDash = () => {
     const admincard = [
@@ -78,18 +85,36 @@ const AdminDash = () => {
             </div>
 
             <div className="grid xl:grid-cols-2 gap-4 my-8 mr-0">
-                <div className="bg-[#151515] p-4 rounded-lg border-l border-orange-500 md:block hidden">
+                <div className="h-auto bg-[#151515] p-4 rounded-lg border-l border-orange-500 md:block hidden">
                     <OneLineChart />
                 </div>
                 <div className="flex ">
-                    <div className="md:mr-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
+                    <div className="h-auto md:mr-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
                         <DoughnutChart />
                     </div>
-                    <div className="pt-12 md:ml-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
+                    <div className="h-auto pt-12 md:ml-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
                         <img src={gymuser} alt="" />
                     </div>
                 </div>
+            </div>
 
+            <div className="md:flex">
+                <div className="w-full md:mr-2 md:my-0 my-4">
+                    <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Latest User SignUp</h1>
+                    <LatestSignUps />
+                </div>
+                <div className="w-full md:ml-2 md:my-0 my-4">
+                    <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Recent Check-ins</h1>
+                    <RecentCheckins />
+                </div>
+            </div>
+            <div className="pt-8 w-full md:ml-2 md:my-0 my-4">
+                <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Trainer Activity Log</h1>
+                <TrainerActLog />
+            </div>
+
+            <div className="">
+                <GymStats />
             </div>
         </div>
     )
