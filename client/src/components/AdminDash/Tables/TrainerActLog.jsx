@@ -19,9 +19,9 @@ const TrainerActLog = () => {
                         <td className='md:table-cell hidden'>jehan</td>
                         <td className='md:table-cell hidden max-w-64'>Start new WorkOut for New Commers </td>
                         <td className='md:table-cell hidden'>02/04/2025 10:40AM</td>
-                        <td className='md:hidden table-cell'>
+                        <td className='md:hidden table-cell py-6'>
                             <p className="">jehan</p>
-                            <p className="">Start new WorkOut for New Commers</p>
+                            <p className="text-orange-500">Start new WorkOut for New Commers</p>
                             <p className="">02/04/2025 10:40AM</p>
                         </td>
                     </tr>

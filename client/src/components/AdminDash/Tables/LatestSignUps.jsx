@@ -17,7 +17,7 @@ const LatestSignUps = () => {
                     <td className='font-semibold md:w-0 w-20 text-center'>1</td>
                     <td className='md:table-cell hidden'>jehanweerasuriya@123.com</td>
                     <td className='md:table-cell hidden'>Admin</td>
-                    <td className='md:hidden table-cell'>
+                    <td className='md:hidden table-cell py-6'>
                         <p className="">jehanweerasuriya@123.com</p>
                         <p className="text-orange-500 font-semibold">Admin</p>
                     </td>

@@ -100,13 +100,24 @@ const AdminDash = () => {
                     <LatestSignUps />
                 </div>
                 <div className="w-full md:ml-2 md:my-0 my-4">
-                    <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Trainer Activity Log</h1>
+                    <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Recent Check-ins</h1>
                     <RecentCheckins />
                 </div>
             </div>
             <div className="pt-8 w-full md:ml-2 md:my-0 my-4">
                 <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Trainer Activity Log</h1>
                 <TrainerActLog />
+            </div>
+
+            <div className="flex mt-8">
+                <div className="">
+                    <div className="inline-block p-2 bg-orange-500 rounded">
+                        <BiSolidDashboard className='h-6 w-auto fill-white' />
+                    </div>
+                </div>
+                <div className="pl-4">
+                    <h1 className="text-orange-500 text-xl pt-1 font-semibold uppercase">Gym Usage Statistics</h1>
+                </div>
             </div>
         </div>
     )
