@@ -9,6 +9,9 @@ import gymuser from '../../assets/GymUser.png'
 import LatestSignUps from '../../components/AdminDash/Tables/LatestSignUps';
 import TrainerActLog from '../../components/AdminDash/Tables/TrainerActLog';
 import RecentCheckins from '../../components/AdminDash/Tables/RecentCheckins';
+import TimeCom from '../../components/OtherCom/TimeCom';
+import BestTrainer from '../../components/AdminDash/Tables/BestTrainer';
+import TopWorkoutPrograms from '../../components/AdminDash/Tables/TopWorkoutPrograms';
 
 const AdminDash = () => {
     const admincard = [
@@ -118,6 +121,21 @@ const AdminDash = () => {
                 <div className="pl-4">
                     <h1 className="text-orange-500 text-xl pt-1 font-semibold uppercase">Gym Usage Statistics</h1>
                 </div>
+            </div>
+
+            <div className="md:flex mt-8">
+                <div className="bg-[#151515] w-full md:mr-2 p-4 rounded-lg md:my-0 my-4">
+                    <TimeCom />
+                </div>
+                <div className="bg-[#151515] w-full md:ml-2 p-4 rounded-lg md:my-0 my-4">
+                    <h1 className="text-orange-500 text-xl pt-0 pb-4 font-semibold uppercase">Top Trainers</h1>
+                    <BestTrainer />
+                </div>
+            </div>
+
+            <div className="bg-[#151515] w-full md:ml-2 p-4 rounded-lg mt-8">   
+                <h1 className="text-orange-500 text-xl pt-0 pb-4 font-semibold uppercase">Best Workout Programmes</h1>
+                <TopWorkoutPrograms />
             </div>
         </div>
     )
