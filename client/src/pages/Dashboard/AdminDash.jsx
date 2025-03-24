@@ -78,14 +78,14 @@ const AdminDash = () => {
             </div>
 
             <div className="grid xl:grid-cols-2 gap-4 my-8 mr-0">
-                <div className="bg-[#151515] p-4 rounded-lg border-l border-orange-500 md:block hidden">
+                <div className="h-auto bg-[#151515] p-4 rounded-lg border-l border-orange-500 md:block hidden">
                     <OneLineChart />
                 </div>
                 <div className="flex ">
-                    <div className="md:mr-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
+                    <div className="h-auto md:mr-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
                         <DoughnutChart />
                     </div>
-                    <div className="pt-12 md:ml-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
+                    <div className="h-auto pt-12 md:ml-2 w-1/2 bg-[#151515] p-4 rounded-lg h-auto border-l border-orange-500 md:block hidden">
                         <img src={gymuser} alt="" />
                     </div>
                 </div>

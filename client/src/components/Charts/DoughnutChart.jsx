@@ -1,54 +1,65 @@
-import React from 'react';
-import { Doughnut } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import React, { useRef, useEffect, useState } from "react";
+import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 // Register chart elements
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const DoughnutChart = () => {
-  // Dummy data
+  const chartRef = useRef(null);
+  const [chartSize, setChartSize] = useState(250); // Default size
+
+  // Adjust chart size based on container width
+  useEffect(() => {
+    const updateSize = () => {
+      if (chartRef.current) {
+        setChartSize(chartRef.current.clientWidth);
+      }
+    };
+
+    window.addEventListener("resize", updateSize);
+    updateSize();
+
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   const data = {
-    labels: ['Admin', 'Trainers', 'Users'], // Labels for each section of the doughnut
+    labels: ["Admin", "Trainers", "Users"],
     datasets: [
       {
-        label: 'My First Dataset',
-        data: [5, 20, 75], // Data points for each section
-        backgroundColor: [
-          '#ff5e00', // Red
-          '#cc5200', // Blue
-          '#ff9e00', // Yellow
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 205, 86, 1)',
-        ],
-        borderWidth: 1, // Border width for each section
+        label: "User Distribution",
+        data: [5, 20, 75],
+        backgroundColor: ["#ff5e00", "#cc5200", "#ff9e00"],
+        borderColor: ["#d64500", "#992e00", "#cc7a00"],
+        borderWidth: 1,
       },
     ],
   };
 
   const options = {
-    responsive: true, // Make chart responsive to container size
-    maintainAspectRatio: false, // Allow the chart to adjust its aspect ratio based on container
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
+      legend: {
+        position: "bottom",
+      },
       title: {
         display: true,
-        text: 'All Users on System',
+        text: "All Users on System",
       },
       tooltip: {
         callbacks: {
-          label: (tooltipItem) => {
-            return `${tooltipItem.label}: ${tooltipItem.raw}`;
-          },
+          label: (tooltipItem) => `${tooltipItem.label}: ${tooltipItem.raw}`,
         },
       },
     },
   };
 
   return (
-    <div className="w-full h-full">
-      <Doughnut data={data} options={options} />
+    <div ref={chartRef} className="w-full max-w-sm mx-auto">
+      <div style={{ height: `${chartSize}px` }}>
+        <Doughnut data={data} options={options} />
+      </div>
     </div>
   );
 };
