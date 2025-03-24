@@ -6,6 +6,9 @@ import CountUp from 'react-countup'
 import OneLineChart from '../../components/Charts/OneLineChart';
 import DoughnutChart from '../../components/Charts/DoughnutChart';
 import gymuser from '../../assets/GymUser.png'
+import LatestSignUps from '../../components/AdminDash/Tables/LatestSignUps';
+import TrainerActLog from '../../components/AdminDash/Tables/TrainerActLog';
+import RecentCheckins from '../../components/AdminDash/Tables/RecentCheckins';
 
 const AdminDash = () => {
     const admincard = [
@@ -89,7 +92,21 @@ const AdminDash = () => {
                         <img src={gymuser} alt="" />
                     </div>
                 </div>
+            </div>
 
+            <div className="md:flex">
+                <div className="w-full md:mr-2 md:my-0 my-4">
+                    <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Latest User SignUp</h1>
+                    <LatestSignUps />
+                </div>
+                <div className="w-full md:ml-2 md:my-0 my-4">
+                    <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Trainer Activity Log</h1>
+                    <RecentCheckins />
+                </div>
+            </div>
+            <div className="pt-8 w-full md:ml-2 md:my-0 my-4">
+                <h1 className="text-xl font-semibold text-orange-500 mb-2 uppercase">Trainer Activity Log</h1>
+                <TrainerActLog />
             </div>
         </div>
     )
