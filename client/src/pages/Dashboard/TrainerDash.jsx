@@ -4,6 +4,7 @@ import GymStats from '../../components/OtherCom/GymStats'
 import { FaUsers } from 'react-icons/fa'
 import { FaFileLines, FaDumbbell, FaUser } from 'react-icons/fa6'
 import CountUp from 'react-countup'
+import TotalSessions from '../../components/OtherCom/Trainer/TotalSessions'
 
 const TrainerDash = () => {
     const trainercard = [
@@ -68,6 +69,16 @@ const TrainerDash = () => {
                         )
                     })
                 }
+            </div>
+
+            <div className="xl:flex mt-8">
+                <div className="w-1/2">
+                    <h1 className="text-xl font-semibold text-orange-500 mb-4 uppercase">My Sessions Progress in Last 6 Months</h1>
+                    <TotalSessions />
+                </div>
+                <div className="w-1/2">
+                    dasd
+                </div>
             </div>
 
 
