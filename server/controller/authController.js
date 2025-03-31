@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const UserActivity = require('../models/UserActivity');
 const validator = require('validator')
 const jwt = require('jsonwebtoken')
+const { signup, signin } = require('mern-mvc-gen')
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -14,6 +15,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const authController = {
+
     signup: async(req, res) => {
         try{
             const {
@@ -70,6 +72,7 @@ const authController = {
         }
     },
 
+
     signin: async(req, res) => {
         try{
             const {
@@ -112,7 +115,9 @@ const authController = {
         catch(err){
             console.log(err)
         }
-    }
+    },
+
+    
 };
 
 module.exports = authController;
