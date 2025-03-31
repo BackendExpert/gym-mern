@@ -5,6 +5,8 @@ import { FaUsers } from 'react-icons/fa'
 import { FaFileLines, FaDumbbell, FaUser } from 'react-icons/fa6'
 import CountUp from 'react-countup'
 import TotalSessions from '../../components/OtherCom/Trainer/TotalSessions'
+import TrainerMaleFemale from '../../components/Charts/TrainerMaleFemale'
+import TrainerProgramme from '../../components/Charts/TrainerProgramme'
 
 const TrainerDash = () => {
     const trainercard = [
@@ -77,7 +79,16 @@ const TrainerDash = () => {
                     <TotalSessions />
                 </div>
                 <div className="w-1/2">
-                    dasd
+                    <div className="flex">
+                        <div className="w-1/2">
+                            <h1 className="text-xl font-semibold text-orange-500 mb-4 uppercase">Members (Male, Female)</h1>
+                            <TrainerMaleFemale />
+                        </div>
+                        <div className="w-1/2">
+                            <h1 className="text-xl font-semibold text-orange-500 mb-4 uppercase">Trainer Programmes</h1>
+                            <TrainerProgramme />
+                        </div>
+                    </div>
                 </div>
             </div>
 
