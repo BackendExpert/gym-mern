@@ -37,13 +37,6 @@ const MemberDash = () => {
             icon: FaChalkboardUser,
             title: 'in FitFlex',
         },
-        {
-            id: 4,
-            name: 'New Sign-ups',
-            value: 500,
-            icon: FaUserPlus,
-            title: 'in FitFlex',
-        },
     ]
     return (
         <div className='mt-4 text-white mr-4'>
@@ -60,6 +53,15 @@ const MemberDash = () => {
 
             <div className="mt-4">
                 <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-4">
+                    <div className="flex bg-orange-500 p-8 rounded-lg">
+                        <div className="">
+                            <FaUser className='h-10 w-auto' />
+                        </div>
+                        <div className="ml-4">
+                            <h1 className="">Jehan</h1>
+                            <p className="uppercase text-xl font-semibold">trainer</p>
+                        </div>
+                    </div>
                     {
                         admincard.map((data, index) => {
                             return (
